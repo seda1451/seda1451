@@ -1,0 +1,23 @@
+            - název: Nastavení prostředí Node.js
+  používá: actions/setup-node@v4.1.0
+  s:
+    # Nastavte vždy-auth v npmrc.
+    always-auth: # volitelné, výchozí hodnota je false
+    # Verze Specifikace verze, která se má použít. Příklady: 12.x, 10.15.1, >=10.15.0.
+    node-version: # volitelné
+    # Soubor obsahující specifikaci verze verze, kterou chcete použít. Příklady: package.json, .nvmrc, .node-version, .tool-versions.
+    node-version-file: # volitelné
+    # Cílová architektura pro použití Node. Příklady: x86, x64. Ve výchozím nastavení bude používat architekturu systému.
+    architektura: # volitelná
+    # Nastavte tuto možnost, pokud chcete, aby akce zjišťovala nejnovější dostupnou verzi, která vyhovuje specifikaci verze.
+    check-latest: # volitelné
+    # Volitelný registr pro nastavení ověřování. Nastaví registr v souboru .npmrc a .yarnrc na úrovni projektu a nastaví auth pro čtení z env.NODE_AUTH_TOKEN.
+    registr-url: # volitelné
+    # Volitelný rozsah pro ověřování proti omezeným registrům. Při použití registru balíčků GitHub (https://npm.pkg.github.com/) se obrátí na vlastníka úložiště.
+    rozsah: # volitelný
+    # Používá se k vytažení distribucí uzlů z verzí uzlů. Protože existuje výchozí nastavení, uživatel jej obvykle nedodává. Při spuštění této akce na github.com je dostatečná výchozí hodnota. Když běžíte na GHES, můžete předat osobní přístupový token pro github.com, pokud se setkáte s omezením rychlosti.
+    token: # volitelné, výchozí je ${{ github.server_url == 'https://github.com' && github.token || '' }}
+    # Používá se k určení správce balíčků pro ukládání do mezipaměti ve výchozím adresáři. Podporované hodnoty: npm, yarn, pnpm.
+    mezipaměť: # volitelné
+    # Používá se k určení cesty k souboru závislostí: package-lock.json, yarn.lock atd. Podporuje zástupné znaky nebo seznam názvů souborů pro ukládání více závislostí do mezipaměti.
+    cache-dependency-path: # volitelné
